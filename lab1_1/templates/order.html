@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ data.id }}{% endblock %}
+
+{% block content %}
+    <div>Информация о  №{{ data.id }}</div>
+    {% for v in data.description %}
+
+        {% if data.id == v.id %}
+        {{  v.title}}
+     {% endif %}
+    {% endfor %}
+{% endblock %}
