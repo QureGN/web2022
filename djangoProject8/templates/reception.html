@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Запись{% endblock %}
+
+{% block content %}
+     <ul>
+        {% for m in data.schedule %}
+            <li>{{ m.time }}</li>
+
+        {% endfor %}
+    </ul>
+
+{% endblock %}

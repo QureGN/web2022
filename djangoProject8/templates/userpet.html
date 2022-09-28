@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Наши сотрудники{% endblock %}
+
+{% block content %}
+     <div> Хозяин: {{ data.user.username }}</div>
+    <div> Телефон: {{ data.user.phone }}</div>
+    <ul>
+        {% for m in data.pet %}
+                <li>{{ m.species }} </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

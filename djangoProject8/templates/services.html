@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Услуги{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for m in data.services %}
+            <li><a href="{% url 'description_url' m.id %}">{{ m.service }}</a> </li>
+
+        {% endfor %}
+    </ul>
+{% endblock %}
